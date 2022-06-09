@@ -12,6 +12,9 @@ import RxSwift
 protocol ViewModelInput {
     func plusButtonDidTap()
     func minusButtonDidTap()
+    
+    var plusButtonTap: Signal<Void> { get }
+    var minusButtonTap: Signal<Void> { get }
 }
 
 protocol ViewModelOutput {
@@ -25,6 +28,10 @@ protocol ViewModelType {
 }
 
 final class ViewModel: ViewModelType, ViewModelInput, ViewModelOutput {
+    var plusButtonTap: Signal<Void>
+    
+    var minusButtonTap: Signal<Void>
+    
     var input: ViewModelInput { return self }
     var output: ViewModelOutput { return self }
     
@@ -35,13 +42,22 @@ final class ViewModel: ViewModelType, ViewModelInput, ViewModelOutput {
     private let plusButtonDidTapPropaerty = PublishSubject<Void>()
     private let minusButtonDidTapProperty = PublishSubject<Void>()
     
-    init() {
+    init(plusButtonTap: Signal<Void>, minusButtonTap: Signal<Void>) {
         
-        count = Observable.merge(plusButtonDidTapPropaerty.map { _ in 1 },
-                                 minusButtonDidTapProperty.map { _ in -1 })
+        self.plusButtonTap = plusButtonTap
+        self.minusButtonTap = minusButtonTap
+        
+        count = Observable.merge(plusButtonTap.asObservable().map { _ in 1 },
+                                 minusButtonTap.asObservable().map { _ in -1 })
         .scan(0, accumulator: +)
         .startWith(0)
         .asDriver(onErrorDriveWith: .empty())
+        
+//        count = Observable.merge(plusButtonDidTapPropaerty.map { _ in 1 },
+//                                 minusButtonDidTapProperty.map { _ in -1 })
+//        .scan(0, accumulator: +)
+//        .startWith(0)
+//        .asDriver(onErrorDriveWith: .empty())
         
         isEven = count.map { counter in
             counter % 2 == 0
