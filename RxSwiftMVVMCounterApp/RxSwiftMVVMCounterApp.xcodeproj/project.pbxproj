@@ -18,6 +18,7 @@
 		8C4CA80728524E4100DAED66 /* RxSwiftMVVMCounterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CA80628524E4100DAED66 /* RxSwiftMVVMCounterAppTests.swift */; };
 		8C4CA81128524E4100DAED66 /* RxSwiftMVVMCounterAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CA81028524E4100DAED66 /* RxSwiftMVVMCounterAppUITests.swift */; };
 		8C4CA81328524E4100DAED66 /* RxSwiftMVVMCounterAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CA81228524E4100DAED66 /* RxSwiftMVVMCounterAppUITestsLaunchTests.swift */; };
+		8C4CA8202852529600DAED66 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CA81F2852529600DAED66 /* ViewModel.swift */; };
 		E4E4FECB98AD235D4DCE2959 /* Pods_RxSwiftMVVMCounterAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403699A13F6EAD981C7D503B /* Pods_RxSwiftMVVMCounterAppTests.framework */; };
 		FBA65126A30511C76D6FEFCF /* Pods_RxSwiftMVVMCounterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E4B214FA56509961B912E4 /* Pods_RxSwiftMVVMCounterApp.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		8C4CA80C28524E4100DAED66 /* RxSwiftMVVMCounterAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftMVVMCounterAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4CA81028524E4100DAED66 /* RxSwiftMVVMCounterAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftMVVMCounterAppUITests.swift; sourceTree = "<group>"; };
 		8C4CA81228524E4100DAED66 /* RxSwiftMVVMCounterAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftMVVMCounterAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8C4CA81F2852529600DAED66 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		950E031DD679AF974A85A272 /* Pods-RxSwiftMVVMCounterApp-RxSwiftMVVMCounterAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftMVVMCounterApp-RxSwiftMVVMCounterAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftMVVMCounterApp-RxSwiftMVVMCounterAppUITests/Pods-RxSwiftMVVMCounterApp-RxSwiftMVVMCounterAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6AD03229ED47ADD1914A154 /* Pods-RxSwiftMVVMCounterAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftMVVMCounterAppTests.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftMVVMCounterAppTests/Pods-RxSwiftMVVMCounterAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B445BED10BD095DD119F1628 /* Pods_RxSwiftMVVMCounterApp_RxSwiftMVVMCounterAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftMVVMCounterApp_RxSwiftMVVMCounterAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 				8C4CA7EC28524E3E00DAED66 /* AppDelegate.swift */,
 				8C4CA7EE28524E3E00DAED66 /* SceneDelegate.swift */,
 				8C4CA7F028524E3E00DAED66 /* ViewController.swift */,
+				8C4CA81F2852529600DAED66 /* ViewModel.swift */,
 				8C4CA7F228524E3E00DAED66 /* Main.storyboard */,
 				8C4CA7F828524E4100DAED66 /* Assets.xcassets */,
 				8C4CA7FA28524E4100DAED66 /* LaunchScreen.storyboard */,
@@ -167,7 +170,6 @@
 				A6AD03229ED47ADD1914A154 /* Pods-RxSwiftMVVMCounterAppTests.debug.xcconfig */,
 				73A971EC3E0FE82B8B8AA196 /* Pods-RxSwiftMVVMCounterAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -410,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C4CA8202852529600DAED66 /* ViewModel.swift in Sources */,
 				8C4CA7F728524E3E00DAED66 /* RxSwiftMVVMCounterApp.xcdatamodeld in Sources */,
 				8C4CA7F128524E3E00DAED66 /* ViewController.swift in Sources */,
 				8C4CA7ED28524E3E00DAED66 /* AppDelegate.swift in Sources */,

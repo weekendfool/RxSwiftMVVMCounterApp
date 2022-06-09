@@ -56,6 +56,11 @@
                             <constraint firstItem="82L-uD-L2h" firstAttribute="top" secondItem="5md-t2-Iam" secondAttribute="bottom" constant="90" id="zv7-Mz-GCJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="minusButton" destination="82L-uD-L2h" id="882-GI-TN1"/>
+                        <outlet property="plusButton" destination="0qW-UG-TPe" id="OE4-zp-7om"/>
+                        <outlet property="sampleLabel" destination="5md-t2-Iam" id="0gG-Ma-Isy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
