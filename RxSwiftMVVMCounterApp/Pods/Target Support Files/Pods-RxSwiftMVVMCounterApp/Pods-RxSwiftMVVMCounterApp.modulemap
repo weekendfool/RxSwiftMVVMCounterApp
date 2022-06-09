@@ -1,0 +1,6 @@
+framework module Pods_RxSwiftMVVMCounterApp {
+  umbrella header "Pods-RxSwiftMVVMCounterApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
